@@ -1,7 +1,9 @@
-export default function Footer() {
+import { footerProps } from "@lib/types";
+
+export default function Footer(props:footerProps) {
   return (
     <div>
-      <p>Copyright ©</p>
+      <p>Copyright © {props.year} {props.fullName} {props.studentId}</p>
     </div>
   );
 }
