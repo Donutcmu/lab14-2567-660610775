@@ -16,15 +16,23 @@ export default function Home() {
       <Title order={2}>Food Review 🍕</Title>
       <Space h="sm"/>
       <Title  order={4}>Your rating</Title>
-      <Rating  lts="xl" defaultValue={0} size="28" pl="3" />
-      <Space h="sm"/>
+      <Rating  flex="lg" lts="xl" defaultValue={0} size="lg" pl="3"
+      styles={(theme) => ({
+        starSymbol: {
+          marginRight: "2", 
+        },
+      })}
+      />
+      <Space h="sm"
+      
+      />
       <Text  size="sm">Your review</Text>
 
 
       <Textarea
       size="sm"
       inputSize="sm"
-      
+      h={80} styles={{wrapper:{height:'100%'},input:{height:'100%'}}}
       
       
       placeholder="Do you enjoy eating?"
@@ -33,7 +41,7 @@ export default function Home() {
     <Button  variant="filled" color="orange" size="sm">Submit Review</Button>
     <Divider my="sm" />
     <Group  gap="xs" justify="center">
-      <Title order={4}  >Elon Musk</Title>
+      <Title  order={4}  >Elon Musk</Title>
       <Rating defaultValue={5.0}  readOnly />
       
     </Group>
